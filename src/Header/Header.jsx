@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import Logo from "../logo.png";
+import Logo from "../assets/Layout/Brand/logo-colored.png";
 import { FaUser, FaCommentDots, FaHeart, FaShoppingCart } from "react-icons/fa";
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
         justifyContent: "space-evenly",
         alignItems: "center",
         borderBottom: "1px solid #e5e7eb",
-        height:"80px",
+        height: "60px",
         // width:"1440px"
       }}
     >
