@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import Logo from "../assets/Layout/Brand/logo-colored.png";
+import Logo from "../../assets/Layout/Brand/logo-colored.png";
 import { FaUser, FaCommentDots, FaHeart, FaShoppingCart } from "react-icons/fa";
 
 const Header = () => {
@@ -27,24 +27,27 @@ const Header = () => {
             alignItems: "center",
             overflow: "hidden",
             marginLeft: "50px",
-            borderRadius: "0.375rem",
-            border: "2px solid #2563eb",
+            borderRadius: "6px",
+            border: "1px solid #0D6EFD",
+            width: "665px",
+            height: "40px",
           }}
         >
           <input
             type="text"
-            placeholder="Search"
+            placeholder=" Search"
             style={{
-              padding: "8px",
-              width: "288px",
-              // color: "#4b5563",
-              // backgroundColor: "#f9fafb",
+              width: "421px",
+              height: "34px",
               outline: "none",
             }}
           />
           <select
             style={{
-              padding: "8px",
+              width: "145px",
+              height: "40px",
+
+              // padding: "8px",
               backgroundColor: "#f9fafb",
               // color: "#4b5563",
               outline: "none",
@@ -60,10 +63,10 @@ const Header = () => {
             style={{
               backgroundColor: "#2563eb",
               color: "#fff",
-              padding: "9px 20px",
               border: "none",
-              // borderRadius: "0.375rem",
               cursor: "pointer",
+              width: "100px",
+              height: "40px",
             }}
           >
             Search
@@ -77,16 +80,16 @@ const Header = () => {
           display: "flex",
           alignItems: "center",
           gap: "1.5rem",
-          color: "#4b5563",
+          color: "#8B96A5",
           // fontSize: "18px",
           textAlign: "center",
           cursor: "pointer",
         }}
       >
-        <div>
+        <div className="links-I">
           <i>
             <a href="#">
-              <FaUser />
+              <FaUser style={{ color: "#8b96a5" }} />
             </a>
           </i>
           <div>Profile</div>
@@ -94,7 +97,7 @@ const Header = () => {
         <div>
           <i>
             <a href="#">
-              <FaCommentDots />
+              <FaCommentDots style={{ color: "#8b96a5" }} />
             </a>
           </i>
           <div>Message</div>
@@ -102,7 +105,7 @@ const Header = () => {
         <div>
           <i>
             <a href="#">
-              <FaHeart />
+              <FaHeart style={{ color: "#8b96a5" }} />
             </a>
           </i>
           <div>Orders</div>
@@ -110,7 +113,7 @@ const Header = () => {
         <div>
           <i>
             <a href="/cart">
-              <FaShoppingCart />
+              <FaShoppingCart style={{ color: "#8b96a5" }} />
             </a>
           </i>
           <div>My Cart</div>

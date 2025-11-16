@@ -1,11 +1,11 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./Header/Header.jsx";
+import Header from "./Components/Header/Header.jsx";
 import { HomePage } from "./Pages/HomePage.jsx";
 import { ProductPage } from "./Pages/ProductPage.jsx";
 import { ProductDetailPage } from "./Pages/ProductDetailPage.jsx";
 import { CartPage } from "./Pages/CartPage.jsx";
-import Navbar from "./Navbar/Navbar.jsx";
+import Navbar from "./Components/Navbar/Navbar.jsx";
 
 function App() {
   return (

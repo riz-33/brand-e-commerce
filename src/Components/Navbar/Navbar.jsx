@@ -1,14 +1,14 @@
 import React from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa";
 import "./Navbar.css";
-import Flag from "../assets/Layout1/Image/flags/DE@2x.png";
+import Flag from "../../assets/Layout1/Image/flags/DE@2x.png";
 
 const Navbar = () => {
   return (
     <div
       style={{
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "space-evenly",
         // alignItems: "center",
         // padding: "12px 40px",
         backgroundColor: "white",
@@ -16,16 +16,24 @@ const Navbar = () => {
         fontSize: "16px",
         // color: "#374151",
         height: "56px",
+        // width: "1440px",
         top: "86px",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: "1.8rem" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "1.8rem",
+          width: "850px",
+        }}
+      >
         <div
           className="nav-item"
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "6px",
+            gap: "8px",
             cursor: "pointer",
             transition: "color 0.2s ease-in-out",
           }}
@@ -43,14 +51,20 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: "1.8rem" }}>
-        <div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "1.8rem",
+        }}
+      >
+        <div style={{ width: "124px" }}>
           English, USD <FaChevronDown />
         </div>
 
-        <div>
+        <div style={{ width: "115px" }}>
           Ship to
-          <img src={Flag} alt="flag"  />
+          <img src={Flag} alt="flag" />
           <FaChevronDown />
         </div>
       </div>
