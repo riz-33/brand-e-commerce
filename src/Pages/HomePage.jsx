@@ -240,14 +240,12 @@ export const HomePage = () => {
             height: "240px",
             marginTop: "3%",
             border: "1px solid #DEE2E7",
-            // paddingLeft: "15px",
           }}
         >
-          <Row>
+          <Row >
             <Col>
               <h4
                 style={{
-                  width: "155px",
                   height: "28px",
                   fontWeight: 600,
                   fontSize: "20px",
@@ -325,131 +323,87 @@ export const HomePage = () => {
               </Row>
             </Col>
 
-            <Col
-              style={{
-                width: "895px",
-                height: "235px",
-                border: "1px solid black",
-              }}
-            >
+            <Col>
               <Row>
-                <Col
-                  style={{ width: 179, height: 235, border: "1px solid black" }}
+                <Card
+                  className="section-scale-card"
+                  hoverable
+                  cover={<img className="card-image" alt="Watch" src={Watch} />}
                 >
-                  <Card
-                    hoverable
-                    cover={
-                      <img
-                        draggable={false}
-                        width={140}
-                        height={140}
-                        alt="Watch"
-                        src={Watch}
-                      />
-                    }
-                  >
-                    <div
-                      style={{
-                        textAlign: "center",
-                        marginTop: "40px",
-                      }}
-                    >
-                      <Meta title="Smart Watches" />
-                      <Badge
-                        style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
-                        count={"-25%"}
-                      />
-                    </div>
-                  </Card>
-                </Col>
-                <Col
-                  style={{ width: 179, height: 235, border: "1px solid black" }}
+                  <div>
+                    <Meta title="Smart Watches" />
+                    <Badge
+                      style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
+                      count={"-25%"}
+                    />
+                  </div>
+                </Card>
+                <Card
+                  className="section-scale-card"
+                  hoverable
+                  cover={
+                    <img className="card-image" alt="Laptop" src={Laptop} />
+                  }
                 >
-                  <Card
-                    hoverable
-                    cover={
-                      <img
-                        draggable={false}
-                        width={140}
-                        height={140}
-                        alt="Laptop"
-                        src={Laptop}
-                      />
-                    }
-                  >
+                  <div>
                     <Meta title="Laptops" />
                     <Badge
                       style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
                       count={"-15%"}
                     />
-                  </Card>
-                </Col>
-                <Col
-                  style={{ width: 179, height: 235, border: "1px solid black" }}
+                  </div>
+                </Card>
+
+                <Card
+                  className="section-scale-card"
+                  hoverable
+                  cover={
+                    <img className="card-image" alt="Camera" src={Camera} />
+                  }
                 >
-                  <Card
-                    hoverable
-                    cover={
-                      <img
-                        draggable={false}
-                        width={140}
-                        height={140}
-                        alt="Camera"
-                        src={Camera}
-                      />
-                    }
-                  >
+                  <div>
                     <Meta title="GoPro Cameras" />
                     <Badge
                       style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
                       count={"-40%"}
                     />
-                  </Card>
-                </Col>
-                <Col
-                  style={{ width: 179, height: 235, border: "1px solid black" }}
+                  </div>
+                </Card>
+                <Card
+                  className="section-scale-card"
+                  hoverable
+                  cover={
+                    <img
+                      width={140}
+                      height={140}
+                      alt="Headphone"
+                      src={Headphone}
+                    />
+                  }
                 >
-                  <Card
-                    hoverable
-                    cover={
-                      <img
-                        draggable={false}
-                        width={140}
-                        height={140}
-                        alt="Headphone"
-                        src={Headphone}
-                      />
-                    }
-                  >
+                  <div>
                     <Meta title="Headphones" />
                     <Badge
                       style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
                       count={"-25%"}
                     />
-                  </Card>
-                </Col>
-                <Col
-                  style={{ width: 179, height: 235, border: "1px solid black" }}
+                  </div>
+                </Card>
+                <Card
+                  className="section-scale-card"
+                  hoverable
+                  cover={
+                    <img className="card-image" alt="Mobile" src={Mobile} />
+                  }
                 >
-                  <Card
-                    hoverable
-                    cover={
-                      <img
-                        draggable={false}
-                        width={140}
-                        height={140}
-                        alt="Mobile"
-                        src={Mobile}
-                      />
-                    }
-                  >
+                  <div>
                     <Meta title="Canon Cameras" />
                     <Badge
                       style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
                       count={"-25%"}
                     />
-                  </Card>
-                </Col>
+                  </div>
+                </Card>
               </Row>
             </Col>
           </Row>

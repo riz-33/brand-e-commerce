@@ -1,24 +1,38 @@
 .ant-card-body {
-    padding-left: 20px !important;
-    padding-top: 0 !important;
+  /* padding-left: 20px !important; */
+  padding-top: 0 !important;
 }
 
 .ant-statistic-title {
-    color: white !important;
-    width: 21px !important;
-    height: 19px !important;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-    margin: 0% !important;
+  color: white !important;
+  width: 21px !important;
+  height: 19px !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  margin: 0% !important;
 }
 
 .ant-statistic-content-value {
-    color: white !important;
-    width: 22px !important;
-    height: 15px !important;
-    font-weight: 400 !important;
-    font-size: 12px !important;
-    line-height: 100% !important;
-    letter-spacing: 0% !important;
-    margin: 0% !important;
+  color: white !important;
+  width: 22px !important;
+  height: 15px !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 100% !important;
+  letter-spacing: 0% !important;
+  margin: 0% !important;
+}
+
+.section-scale-card {
+  width: 179px;
+  height: 240px;
+}
+
+.card-image {
+  width: 140px;
+  height: 140px;
+}
+
+.section-scale-card > div {
+  text-align: center;
 }
