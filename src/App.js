@@ -6,6 +6,7 @@ import { ProductPage } from "./Pages/ProductPage.jsx";
 import { ProductDetailPage } from "./Pages/ProductDetailPage.jsx";
 import { CartPage } from "./Pages/CartPage.jsx";
 import Navbar from "./Components/Navbar/Navbar.jsx";
+import {Footer} from "./Components/Footer/Footer.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

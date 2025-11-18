@@ -1,5 +1,4 @@
 import React from "react";
-import "./Style.css";
 import { Card } from "antd";
 import Section1 from "../Components/Home Page/Section1.jsx";
 import { Section2 } from "../Components/Home Page/Section2.jsx";
