@@ -1,10 +1,10 @@
 import React from "react";
 import "./Style.css";
 import { Badge, Card, Col, Row, Statistic } from "antd";
-import Watch from "../../assets/Image/tech/8.png";
-import Laptop from "../../assets/Image/tech/image 34.png";
-import Camera from "../../assets/Image/tech/6.png";
-import Headphone from "../../assets/Image/tech/image 29.png";
+import Watch from "../../assets/Image/tech/1.png";
+import Laptop from "../../assets/Image/tech/6.png";
+import Camera from "../../assets/Image/tech/2.png";
+import Headphone from "../../assets/Image/tech/5.png";
 import Mobile from "../../assets/Image/tech/image 23.png";
 const { Meta } = Card;
 
@@ -26,7 +26,7 @@ export const Section2 = () => {
         }}
       >
         <Row style={{ justifyContent: "space-between" }}>
-          <Col style={{ marginLeft: "10px" }}>
+          <Col style={{ marginLeft: "20px" }}>
             <h4
               style={{
                 height: "28px",
@@ -64,7 +64,11 @@ export const Section2 = () => {
                     justifyItems: "center",
                   }}
                 >
-                  <Statistic title="04" value={"Days"} />
+                  <Statistic
+                    style={{ textAlign: "center" }}
+                    title="04"
+                    value={"Days"}
+                  />
                 </Card>
               </Col>
               <Col>

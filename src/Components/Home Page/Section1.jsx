@@ -35,10 +35,11 @@ const Section1 = () => {
           borderRadius: "8px",
           border: "1px solid #DEE2E7",
         }}
-      >
+        >
         <Row>
           <Col
             style={{
+              marginLeft: 10,
               width: "250px",
               height: "360px",
               // border: "1px solid black",

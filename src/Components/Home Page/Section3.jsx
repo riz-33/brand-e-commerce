@@ -9,8 +9,9 @@ import Coffee from "../../assets/Image/interior/6.png";
 import Appliance from "../../assets/Image/interior/7.png";
 import Pots from "../../assets/Image/interior/8.png";
 import bg from "../../assets/Image/backgrounds/Group 969.png";
+import { Card } from "antd";
 
-const Section3 = () => {
+export const Section3 = () => {
   const items = [
     {
       title: "Soft Chairs",
@@ -51,102 +52,125 @@ const Section3 = () => {
   ];
 
   return (
-    <Box
-      sx={{
+    <div
+      className="block-item-group1"
+      style={{
         display: "flex",
         justifyContent: "center",
-        borderRadius: "12px",
         overflow: "hidden",
-        border: "1px solid #e5e7eb",
-        backgroundColor: "#fff",
       }}
     >
-      <Grid container>
-        {/* LEFT BANNER */}
-        <Grid
-          item
-          xs={12}
-          md={3}
-          sx={{
-            backgroundImage: `url("${bg}")`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            p: 4,
-            display: "flex",
-            flexDirection: "column",
-            // justifyContent: "space-between",
-            minHeight: "260px",
-          }}
-        >
-          <Typography variant="h5" fontWeight={700}>
-            Home and <br /> outdoor
-          </Typography>
-
-          <Button
-            variant="contained"
+      <Card
+        className="block-item-card"
+        style={{
+          width: "1180px",
+          height: "257px",
+          marginTop: "3%",
+          border: "1px solid #E0E0E0",
+          borderRadius: "6px",
+          marginLeft: 0,
+        }}
+      >
+        <Grid container>
+          {/* LEFT BANNER */}
+          <Grid
+            item
+            xs={12}
+            md={3}
             sx={{
-              mt: 3,
-              background: "#fff",
-              color: "#111",
-              boxShadow: "0 3px 6px rgba(0,0,0,0.2)",
-              borderRadius: "8px",
-              textTransform: "none",
-              "&:hover": { background: "#f9f9f9" },
+              backgroundImage: `url("${bg}")`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              p: 3,
+              display: "flex",
+              flexDirection: "column",
+              // justifyContent: "space-between",
+              height: "257px",
+              width: "280px",
             }}
           >
-            Source now
-          </Button>
-        </Grid>
+            <Typography variant="h5" fontWeight={700}>
+              Home and <br /> outdoor
+            </Typography>
 
-        {/* RIGHT GRID */}
-        <Grid item xs={12} md={9}>
-          <Grid container>
-            {items.map((item, i) => (
-              <Grid
-                item
-                xs={6}
-                sm={3}
-                key={i}
-                sx={{
-                  borderLeft: {
-                    sm: i % 4 !== 0 ? "1px solid #e5e7eb" : "none",
-                  },
-                  borderBottom: i < 4 ? "1px solid #e5e7eb" : "none",
-                  p: 2.5,
-                }}
-              >
-                <Typography fontWeight={600} fontSize="16px">
-                  {item.title}
-                </Typography>
+            <Button
+              variant="contained"
+              sx={{
+                width: "120px",
+                padding: "6px 6px",
+                mt: 3,
+                background: "#fff",
+                color: "#111",
+                boxShadow: "0 3px 6px rgba(0,0,0,0.2)",
+                borderRadius: "6px",
+                textTransform: "none",
+                "&:hover": { background: "#f9f9f9" },
+              }}
+            >
+              Source now
+            </Button>
+          </Grid>
 
-                <Typography
-                  variant="body2"
-                  sx={{ color: "#6b7280", mt: 0.5, lineHeight: 1.2 }}
-                >
-                  From <br /> {item.price}
-                </Typography>
-
-                <Box
-                  component="img"
-                  src={item.img}
-                  alt={item.title}
+          {/* RIGHT GRID */}
+          <Grid item xs={12} md={9} size={6}>
+            <Grid
+              container
+              sx={{
+                justifyContent: "space-between",
+                height: "257px",
+                width: "900px",
+              }}
+            >
+              {items.map((item, i) => (
+                <Grid
+                  // item
+                  // xs={6}
+                  // sm={3}
+                  key={i}
                   sx={{
-                    width: "90px",
-                    height: "90px",
-                    objectFit: "contain",
-                    mt: 1.5,
-                    ml: "auto",
-                    mr: "auto",
-                    display: "block",
+                    display: "flex",
+                    height: "127px",
+                    width: "223px",
+                    borderLeft: {
+                      sm: i % 4 !== 0 ? "1px solid #e5e7eb" : "none",
+                    },
+                    borderBottom: i < 4 ? "1px solid #e5e7eb" : "none",
+                    p: 2.5,
                   }}
-                />
-              </Grid>
-            ))}
+                >
+                  <div>
+                    <Typography fontWeight={400} fontSize="16px">
+                      {item.title}
+                    </Typography>
+
+                    <Typography
+                      variant="body2"
+                      sx={{ color: "#6b7280", mt: 0.5, lineHeight: 1.2 }}
+                    >
+                      From <br /> {item.price}
+                    </Typography>
+                  </div>
+
+                  <Box
+                    component="img"
+                    src={item.img}
+                    alt={item.title}
+                    sx={{
+                      width: "82px",
+                      height: "82px",
+                      objectFit: "contain",
+                      mt: 1.5,
+                      ml: "auto",
+                      mr: "auto",
+                      display: "block",
+                    }}
+                  />
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
-    </Box>
+      </Card>
+    </div>
   );
 };
-
-export default Section3;
