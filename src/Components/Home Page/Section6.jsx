@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Flex, Row, Typography } from "antd";
+import { Card, Col, Row, Typography } from "antd";
 import Shirt from "../../assets/Layout/alibaba/Image/cloth/Bitmap.png";
 import Jacket from "../../assets/Layout/alibaba/Image/cloth/2 1.png";
 import Coat from "../../assets/Layout/alibaba/Image/cloth/image 30.png";
@@ -76,11 +76,10 @@ export const Section6 = () => {
       <div
         style={{
           width: "1180px",
-          // height: "696px",
-          marginTop: "3%",
+          height: "696px",
         }}
       >
-        <h1>Recommended Items</h1>
+        <h2 style={{ padding: 0, margin: 12 }}>Recommended Items</h2>
 
         <Row gutter={[12, 12]} style={{ justifyContent: "space-between" }}>
           {items.map((item, i) => (
@@ -113,20 +112,16 @@ export const Section6 = () => {
                   />
                 </div>
 
-                <Typography
-                  fontWeight={600}
-                  fontSize="16px"
-                  style={{ marginTop: 10 }}
-                >
+                <Typography.Title level={4} style={{ margin: 10 }}>
                   {item.price}
-                </Typography>
+                </Typography.Title>
 
                 <Typography
                   variant="body2"
                   style={{
                     color: "#6b7280",
-                    marginTop: 5,
-                    lineHeight: 1.3,
+                    margin: 10,
+                    lineHeight: 1,
                   }}
                 >
                   {item.description}
