@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Row, Typography } from "antd";
+import { Col, Row, Typography } from "antd";
 import UAE from "../../assets/Layout1/Image/flags/1.png";
 import AUS from "../../assets/Layout1/Image/flags/2.png";
 import USA from "../../assets/Layout1/Image/flags/3.png";

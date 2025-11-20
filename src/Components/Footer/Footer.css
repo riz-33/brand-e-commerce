@@ -1,0 +1,131 @@
+.footer-container {
+  padding: 2.5rem 0;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  background-color: white;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3rem 3rem;
+}
+
+.footer-about {
+  grid-column: span 2;
+  padding-right: 4.5rem;
+}
+
+.footer-description {
+  color: #505050;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer-social {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  background-color: #1f2937;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #2563eb;
+}
+
+.social-svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.footer-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-column > li {
+  list-style: none;
+}
+
+.footer-link {
+  color: #9ca3af;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: #2563eb;
+}
+
+.footer-divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  background-color: #eff2f4;
+}
+
+.footer-credit {
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.footer-language {
+  display: flex;
+  align-items: center;
+  margin: 2px;
+  gap: 5px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-about,
+  .footer-newsletter {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-about,
+  .footer-newsletter {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-about,
+  .footer-newsletter {
+    grid-column: span 1;
+  }
+}
