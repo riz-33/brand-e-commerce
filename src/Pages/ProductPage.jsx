@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import {
   Layout,
   Breadcrumb,
-  Sider,
-  Content,
   Collapse,
   Checkbox,
   Slider,
@@ -59,17 +57,15 @@ const ProductPage = () => {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
 
-  // topbar items count (static here; adapt to filters / API later)
   const totalItems = 12911;
 
-  // shared pagination config
   const paginationConfig = {
     pageSize: 6,
     showSizeChanger: false,
   };
 
-  // card styles
   const cardBoxStyle = {
+    height: "100%",
     borderRadius: 8,
     overflow: "hidden",
     background: "#fff",
@@ -92,12 +88,10 @@ const ProductPage = () => {
 
         <Layout
           style={{
-            padding: "24px 0",
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
           }}
         >
-          {/* SIDEBAR */}
           <Layout.Sider
             width={260}
             style={{
@@ -119,7 +113,11 @@ const ProductPage = () => {
                 </Space>
               </Panel>
 
-              <Panel header="Brands" key="2">
+              <Panel
+                style={{ display: "table-caption" }}
+                header="Brands"
+                key="2"
+              >
                 <Checkbox.Group
                   options={["Samsung", "Apple", "Huawei", "Pocco", "Lenovo"]}
                 />
@@ -130,8 +128,13 @@ const ProductPage = () => {
                 </div>
               </Panel>
 
-              <Panel header="Features" key="3">
+              <Panel
+                style={{ display: "table-caption" }}
+                header="Features"
+                key="3"
+              >
                 <Checkbox.Group
+                  style={{ width: "125px" }}
                   options={[
                     "Metallic",
                     "Plastic cover",
@@ -172,7 +175,11 @@ const ProductPage = () => {
                 </div>
               </Panel>
 
-              <Panel header="Condition" key="5">
+              <Panel
+                style={{ display: "table-caption" }}
+                header="Condition"
+                key="5"
+              >
                 <Checkbox.Group
                   options={["Any", "Refurbished", "Brand new", "Old items"]}
                 />
@@ -189,10 +196,8 @@ const ProductPage = () => {
             </Collapse>
           </Layout.Sider>
 
-          {/* MAIN CONTENT */}
           <Layout style={{ padding: "0 24px", minHeight: 280 }}>
             <Layout.Content style={{ background: "transparent" }}>
-              {/* TOP BAR */}
               <div
                 style={{
                   display: "flex",
@@ -206,8 +211,8 @@ const ProductPage = () => {
                 }}
               >
                 <div style={{ fontSize: 16 }}>
-                  <strong>{totalItems.toLocaleString()}</strong> items in{" "}
-                  <strong>Mobile accessory</strong>
+                  {totalItems.toLocaleString()} items in
+                  <strong> Mobile accessory</strong>
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
@@ -239,9 +244,7 @@ const ProductPage = () => {
                 </div>
               </div>
 
-              {/* PRODUCT LIST / GRID */}
               <div style={{ marginTop: 12 }}>
-                {/* LIST VIEW */}
                 {view === "list" && (
                   <List
                     dataSource={data}
@@ -256,7 +259,6 @@ const ProductPage = () => {
                           <div
                             style={{ display: "flex", gap: 20, padding: 12 }}
                           >
-                            {/* IMAGE */}
                             <div style={{ minWidth: 180 }}>
                               <img
                                 draggable={false}
@@ -271,7 +273,6 @@ const ProductPage = () => {
                               />
                             </div>
 
-                            {/* DETAILS */}
                             <div style={{ flex: 1 }}>
                               <h3 style={{ marginBottom: 6 }}>{item.title}</h3>
 
@@ -323,7 +324,6 @@ const ProductPage = () => {
                               </Button>
                             </div>
 
-                            {/* WISHLIST */}
                             <div
                               style={{
                                 display: "flex",
@@ -338,12 +338,7 @@ const ProductPage = () => {
                                   boxShadow: "1px 1px #38383814",
                                   borderRadius: 8,
                                 }}
-                                icon={
-                                  <HeartTwoTone
-                                    twoToneColor="#ff4d4f"
-                                    style={{ fontSize: 20 }}
-                                  />
-                                }
+                                icon={<HeartTwoTone style={{ fontSize: 20 }} />}
                               />
                             </div>
                           </div>
@@ -353,7 +348,6 @@ const ProductPage = () => {
                   />
                 )}
 
-                {/* GRID VIEW (3 columns) */}
                 {view === "grid" && (
                   <List
                     grid={{
@@ -387,6 +381,7 @@ const ProductPage = () => {
                                 justifyContent: "center",
                                 alignItems: "center",
                                 minHeight: 180,
+                                borderBottom: "1px solid #EFF2F4",
                               }}
                             >
                               <img
@@ -394,7 +389,7 @@ const ProductPage = () => {
                                 src={item.img}
                                 alt={item.title}
                                 style={{
-                                  maxWidth: "100%",
+                                  width: 230,
                                   maxHeight: 160,
                                   objectFit: "contain",
                                 }}
@@ -402,72 +397,86 @@ const ProductPage = () => {
                             </div>
 
                             <div>
-                              <h4 style={{ margin: "6px 0" }}>{item.title}</h4>
-                              <div
-                                style={{
-                                  display: "flex",
-                                  alignItems: "center",
-                                  gap: 8,
-                                }}
+                              <Row
+                                style={{ justifyContent: "center", margin: 10 }}
                               >
-                                <span style={{ fontWeight: 700 }}>
-                                  ${item.price}.00
-                                </span>
-                                {item.oldPrice && (
-                                  <span
+                                <Col span={20}>
+                                  <div
                                     style={{
-                                      textDecoration: "line-through",
-                                      color: "#999",
-                                      marginLeft: 8,
+                                      display: "flex",
+                                      alignItems: "center",
+                                      gap: 8,
                                     }}
                                   >
-                                    ${item.oldPrice}.00
-                                  </span>
-                                )}
-                              </div>
+                                    <span
+                                      style={{ fontSize: 18, fontWeight: 700 }}
+                                    >
+                                      ${item.price}.00
+                                    </span>
+                                    {item.oldPrice && (
+                                      <span
+                                        style={{
+                                          textDecoration: "line-through",
+                                          color: "#999",
+                                          marginLeft: 8,
+                                        }}
+                                      >
+                                        ${item.oldPrice}.00
+                                      </span>
+                                    )}
+                                  </div>
 
-                              <div
-                                style={{
-                                  display: "flex",
-                                  gap: 8,
-                                  alignItems: "center",
-                                  marginTop: 8,
-                                }}
-                              >
-                                <Rate disabled defaultValue={item.rating} />
-                                <span style={{ color: "#f60" }}>
-                                  {item.ratingText}
-                                </span>
-                                <span style={{ color: "#888" }}>
-                                  {item.orders} orders
-                                </span>
-                              </div>
-
-                              <div
-                                style={{
-                                  marginTop: 8,
-                                  display: "flex",
-                                  justifyContent: "space-between",
-                                  alignItems: "center",
-                                }}
-                              >
-                                <Button type="link" style={{ padding: 0 }}>
-                                  View details
-                                </Button>
-                                <Button
-                                  style={{
-                                    border: "1px solid #DEE2E7",
-                                    boxShadow: "1px 1px #38383814",
-                                    borderRadius: 8,
-                                  }}
-                                  icon={
-                                    <HeartTwoTone
-                                      twoToneColor="#ff4d4f"
-                                      style={{ fontSize: 18 }}
+                                  <div
+                                    style={{
+                                      display: "flex",
+                                      gap: 8,
+                                      alignItems: "center",
+                                      marginTop: 8,
+                                    }}
+                                  >
+                                    <Rate disabled defaultValue={item.rating} />
+                                    <span style={{ color: "#f60" }}>
+                                      {item.ratingText}
+                                    </span>
+                                    <span style={{ color: "#888" }}>
+                                      {item.orders} orders
+                                    </span>
+                                  </div>
+                                  <p
+                                    style={{
+                                      margin: "6px 0",
+                                      color: "#606060",
+                                      fontWeight: "400",
+                                      fontSize: "16px",
+                                    }}
+                                  >
+                                    {item.title}
+                                  </p>
+                                </Col>
+                                <Col>
+                                  <div
+                                    style={{
+                                      marginTop: 8,
+                                      display: "flex",
+                                      justifyContent: "space-between",
+                                      alignItems: "center",
+                                    }}
+                                  >
+                                    <Button
+                                      style={{
+                                        border: "1px solid #DEE2E7",
+                                        boxShadow: "1px 1px #38383814",
+                                        borderRadius: 8,
+                                      }}
+                                      icon={
+                                        <HeartTwoTone
+                                          style={{ fontSize: 18 }}
+                                        />
+                                      }
                                     />
-                                  }
-                                />
-                              </div>
+                                  </div>
+                                </Col>
+                              </Row>
                             </div>
                           </div>
                         </Card>
@@ -479,27 +488,6 @@ const ProductPage = () => {
             </Layout.Content>
           </Layout>
         </Layout>
-
-        {/* FOOTER / newsletter + footer area (simple placeholder to match screenshot) */}
-        <div style={{ marginTop: 24 }}>
-          <div style={{ background: "#eef3f7", padding: 20, borderRadius: 8 }}>
-            <h3 style={{ margin: 0 }}>Subscribe on our newsletter</h3>
-            <p style={{ margin: "6px 0 0 0", color: "#666" }}>
-              Get daily news on upcoming offers from many suppliers all over the
-              world
-            </p>
-            <div style={{ marginTop: 12, display: "flex", gap: 8 }}>
-              <Input placeholder="Email" style={{ width: 300 }} />
-              <Button type="primary">Subscribe</Button>
-            </div>
-          </div>
-
-          <footer
-            style={{ marginTop: 18, padding: 24, color: "#777", fontSize: 14 }}
-          >
-            <div>© {new Date().getFullYear()} Ecommerce.</div>
-          </footer>
-        </div>
       </div>
     </Layout>
   );
