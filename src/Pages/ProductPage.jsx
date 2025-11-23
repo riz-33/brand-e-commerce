@@ -50,7 +50,7 @@ const data = Array.from({ length: 24 }).map((_, i) => ({
 
 const ProductPage = () => {
   const [price, setPrice] = useState([0, 999999]);
-  const [view, setView] = useState("list"); // 'list' or 'grid'
+  const [view, setView] = useState("list");
   const [verifiedOnly, setVerifiedOnly] = useState(true);
 
   const {
@@ -61,6 +61,11 @@ const ProductPage = () => {
 
   const paginationConfig = {
     pageSize: 6,
+    showSizeChanger: false,
+  };
+
+  const paginationConfig2 = {
+    pageSize: 9,
     showSizeChanger: false,
   };
 
@@ -355,7 +360,7 @@ const ProductPage = () => {
                       column: 3,
                     }}
                     dataSource={data}
-                    pagination={paginationConfig}
+                    pagination={paginationConfig2}
                     renderItem={(item) => (
                       <List.Item key={item.id}>
                         <Card
