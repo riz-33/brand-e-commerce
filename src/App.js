@@ -4,10 +4,10 @@ import Header from "./Components/Header/Header.jsx";
 import { HomePage } from "./Pages/HomePage.jsx";
 import ProductPage from "./Pages/ProductPage.jsx";
 import { ProductDetailPage } from "./Pages/ProductDetailPage.jsx";
-import CartPage from "./Pages/CartPage.jsx";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import { Newsletter } from "./Components/Footer/Newsletter.jsx";
 import { Footer } from "./Components/Footer/Footer.jsx";
+import {CartPage} from "./Pages/CartPage.jsx";
 
 function App() {
   return (
