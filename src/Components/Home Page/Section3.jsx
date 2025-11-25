@@ -123,9 +123,6 @@ export const Section3 = () => {
             >
               {items.map((item, i) => (
                 <Grid
-                  // item
-                  // xs={6}
-                  // sm={3}
                   key={i}
                   sx={{
                     display: "flex",

@@ -128,13 +128,13 @@
 }
 
 .price-high {
-  border-right: 1px solid black;
+  border-right: 1px solid #bdc1c8;
   /* background: #fff7f5; */
   /* border-color: #ffedd5; */
 }
 
 .price-mid {
-  border-right: 1px solid black;
+  border-right: 1px solid #bdc1c8;
   /* background: #fff; */
   /* border-color: #f3f4f6; */
 }
@@ -217,31 +217,50 @@
 }
 
 .desc-text {
-  color: #6b7280;
+  padding-left: 5px;
+  /* margin: 10px; */
+  padding-right: 50px;
+  font-weight: 400;
+  color: #505050;
   line-height: 1.6;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .spec-table table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 12px;
+  width: 65%;
+  /* border-collapse: collapse; */
+  /* margin-top: 12px; */
+  /* border: 1px solid #EFF2F4; */
 }
 
 .spec-table td {
   padding: 10px;
-  border: 1px solid #eef2f6;
+  border: 1px solid #eff2f4;
   font-size: 13px;
   color: #374151;
 }
 
+.table-heading {
+  /* color: #505050; */
+  background-color: #eff2f4;
+}
+
 .feature-list {
+  padding-left: 20px;
   margin-top: 12px;
   color: #6b7280;
 }
 
+ul.feature-list li::marker {
+  content: "✓ ";
+}
+
 .feature-list li {
   margin: 8px 0;
+}
+
+.ant-list-items {
+  padding: 0 20px 0 10px !important;
 }
 
 /* right small card */
@@ -251,37 +270,47 @@
 
 .you-like-title {
   font-weight: 700;
-  margin-bottom: 12px;
+  padding: 15px 0 0 20px;
 }
 
+.like-avatar {
+  border: 1px solid #e0e0e0;
+  padding: 2px;
+}
+
+.like-price,
+.like-title {
+  font-weight: 500;
+  font-size: 14px;
+}
 /* related products */
 .related-section {
   margin-top: 22px;
 }
 
 .related-grid {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 12px;
+  /* display: flex; */
+  /* gap: 12px; */
+  /* flex-wrap: wrap; */
+  /* margin-top: 12px; */
 }
 
 .related-card {
-  width: 160px;
+  /* width: 160px; */
   border-radius: 6px;
-  text-align: center;
-  padding: 12px;
-  background: #fff;
-  border: 1px solid #f1f5f9;
+  /* text-align: center; */
+  padding: 15px;
+  /* background: #fff; */
+  /* border: 1px solid #f1f5f9; */
 }
 
 .related-img-wrap {
   height: 110px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
-  background: #fafafa;
-  border-radius: 4px;
+  background: #EEEEEE;
+  /* border-radius: 4px; */
   margin-bottom: 10px;
 }
 
@@ -292,9 +321,9 @@
 }
 
 .related-title {
-  font-size: 13px;
-  color: #374151;
-  margin-bottom: 6px;
+  /* font-size: 13px; */
+  /* color: #374151; */
+  /* margin-bottom: 6px; */
 }
 
 .related-price {
@@ -365,7 +394,7 @@
 }
 
 .meta-img {
-margin-right: 10px;
+  margin-right: 10px;
 }
 
 .seller-actions {

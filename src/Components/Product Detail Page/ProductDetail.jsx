@@ -26,6 +26,11 @@ import thumb3 from "../../assets/Image/product/image 40.png";
 import thumb4 from "../../assets/Image/product/image 36.png";
 import thumb5 from "../../assets/Image/product/image 37.png";
 import thumb6 from "../../assets/Image/product/image 39.png";
+import img1 from "../../assets/Layout/alibaba/Image/cloth/image 30.png";
+import img2 from "../../assets/Layout/alibaba/Image/cloth/Bitmap.png";
+import img3 from "../../assets/Layout/alibaba/Image/cloth/2 1.png";
+import img4 from "../../assets/Layout/alibaba/Image/cloth/image 25.png";
+import img5 from "../../assets/Layout/alibaba/Image/cloth/image 26.png";
 
 // NOTE: If using antd v5 import reset css in your root (e.g. index.js):
 // import "antd/dist/reset.css";
@@ -33,6 +38,33 @@ import thumb6 from "../../assets/Image/product/image 39.png";
 const { TabPane } = Tabs;
 
 const thumbnails = [thumb1, thumb2, thumb3, thumb4, thumb5, thumb6];
+const items = [
+  {
+    title: "Men Blazers Sets Elegant Formal",
+    price: "$7.00 - $99.50",
+    img: img1,
+  },
+  {
+    title: "Men Shirt Sleeve Polo Contrast",
+    price: "$7.00 - $99.50",
+    img: img2,
+  },
+  {
+    title: "Apple Watch Series Space Gray",
+    price: "$7.00 - $99.50",
+    img: img3,
+  },
+  {
+    title: "Basketball Crew Socks Long Stuff",
+    price: "$7.00 - $99.50",
+    img: img4,
+  },
+  {
+    title: "New Summer Men's Castrol T-Shirts",
+    price: "$7.00 - $99.50",
+    img: img5,
+  },
+];
 
 const ProductDetail = () => {
   return (
@@ -144,37 +176,46 @@ const ProductDetail = () => {
         {/* Tabs + Right small sidebar */}
         <div className="tabs-area">
           <Row gutter={[24, 24]}>
-            <Col xs={24} lg={18}>
+            <Col xs={24} lg={19}>
               <Card bordered={false} className="tabs-card">
                 <Tabs defaultActiveKey="1" className="pd-tabs">
                   <TabPane tab="Description" key="1">
                     <p className="desc-text">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua...
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum
+                      dolor sit amet, consectetur adipisicing elit, sed do
+                      eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, Quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur.
                     </p>
 
                     <div className="spec-table">
                       <table>
                         <tbody>
                           <tr>
-                            <td>Model</td>
+                            <td className="table-heading">Model</td>
                             <td>#8786867</td>
                           </tr>
                           <tr>
-                            <td>Style</td>
+                            <td className="table-heading">Style</td>
                             <td>Classic style</td>
                           </tr>
                           <tr>
-                            <td>Certificate</td>
+                            <td className="table-heading">Certificate</td>
                             <td>ISO-898921212</td>
                           </tr>
                           <tr>
-                            <td>Size</td>
+                            <td className="table-heading">Size</td>
                             <td>34mm x 450mm x 19mm</td>
                           </tr>
                           <tr>
-                            <td>Memory</td>
+                            <td className="table-heading">Memory</td>
                             <td>36GB RAM</td>
                           </tr>
                         </tbody>
@@ -203,29 +244,26 @@ const ProductDetail = () => {
               </Card>
             </Col>
 
-            <Col xs={24} lg={6}>
+            <Col xs={24} lg={5}>
               <Card bordered={false} className="you-like-card">
                 <h4 className="you-like-title">You may like</h4>
                 <List
                   itemLayout="horizontal"
-                  dataSource={[1, 2, 3, 4, 5]}
+                  dataSource={items}
                   renderItem={(item, i) => (
-                    <List.Item>
+                    <List.Item key={i}>
                       <List.Item.Meta
                         avatar={
                           <Avatar
+                            className="like-avatar"
                             shape="square"
-                            size={56}
-                            src="/mnt/data/web-detail.jpg"
+                            size={64}
+                            src={item.img}
                           />
                         }
-                        title={
-                          <div className="like-title">
-                            Men Blazers Sets Elegant Formal
-                          </div>
-                        }
+                        title={<div className="like-title">{item.title}</div>}
                         description={
-                          <div className="like-price">$7.00 - $99.50</div>
+                          <div className="like-price">{item.price}</div>
                         }
                       />
                     </List.Item>
@@ -238,7 +276,7 @@ const ProductDetail = () => {
 
         {/* Related products */}
         <div className="related-section">
-          <h3>Related products</h3>
+          {/* <h3>Related products</h3> */}
           <RelatedProducts />
         </div>
 
