@@ -276,7 +276,6 @@ const ProductDetail = () => {
 
         {/* Related products */}
         <div className="related-section">
-          {/* <h3>Related products</h3> */}
           <RelatedProducts />
         </div>
 

@@ -295,11 +295,17 @@ ul.feature-list li::marker {
   /* margin-top: 12px; */
 }
 
+.ant-card-head {
+  padding: 0px !important;
+  min-height: auto !important;
+  margin-bottom: 10px !important;
+}
+
 .related-card {
   /* width: 160px; */
   border-radius: 6px;
   /* text-align: center; */
-  padding: 15px;
+  padding: 10px 20px 30px 20px;
   /* background: #fff; */
   /* border: 1px solid #f1f5f9; */
 }
@@ -309,7 +315,7 @@ ul.feature-list li::marker {
   display: flex;
   /* align-items: center; */
   justify-content: center;
-  background: #EEEEEE;
+  background: #eeeeee;
   /* border-radius: 4px; */
   margin-bottom: 10px;
 }
@@ -321,22 +327,24 @@ ul.feature-list li::marker {
 }
 
 .related-title {
-  /* font-size: 13px; */
-  /* color: #374151; */
-  /* margin-bottom: 6px; */
+  font-weight: 400;
+  font-size: 15px;
+  padding-right: 40px;
+  margin-bottom: 5px;
 }
 
 .related-price {
+  font-weight: 400;
   font-size: 13px;
-  color: #9aa3ad;
+  color: #8b96a5;
 }
 
 /* discount banner */
 .discount-banner {
   margin-top: 22px;
   border-radius: 8px;
-  padding: 18px;
-  background: linear-gradient(90deg, #2b8df6 0%, #0a5de0 60%);
+  padding: 28px;
+  background: linear-gradient(60deg, #237cff 60%, #005ade 60%);
   color: #fff;
 }
 
@@ -346,13 +354,17 @@ ul.feature-list li::marker {
   align-items: center;
   gap: 12px;
   max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 16px;
+  /* margin: 0 auto; */
+  /* padding: 0 16px; */
 }
 
 .banner-cta {
-  background: #ff8a00;
-  border-color: #ff8a00;
+  background: #ff9017;
+  border-color: #ff9017;
+}
+
+.banner-cta:hover {
+  background: #ff9017 !important;
 }
 
 /* seller card (some overrides) */
