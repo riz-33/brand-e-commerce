@@ -36,7 +36,7 @@
   object-fit: contain;
 }
 
-.section-scale-card > div {
+.section-scale-card>div {
   text-align: center;
 }
 
@@ -46,4 +46,124 @@
 
 .ant-card-head {
   border-bottom: none !important;
+}
+
+
+
+
+.section1-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.section1-card {
+  padding: 10px;
+  width: 100%;
+  /* max-width: 1180px; */
+  /* border-radius: 10px !important; */
+  border: 1px solid #d9d9d9 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* LEFT MENU */
+.category-main {
+  height: 45px;
+  background: #e5f1ff;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.category-item {
+  height: 42px;
+  padding: 10px;
+  border-bottom: none !important;
+  cursor: pointer;
+  font-size: 15px;
+  color: #444;
+}
+
+.hoverable:hover {
+  background-color: #f5f7fa;
+  transition: 0.2s;
+}
+
+/* BANNER */
+.banner-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* USER CARD */
+.user-card {
+  background-color: #eaf4ff !important;
+  border-radius: 8px !important;
+  margin-bottom: 12px;
+  padding: 12px;
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
+}
+
+.user-greeting {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Buttons */
+.btn-primary {
+  margin-bottom: 8px;
+  border-radius: 6px !important;
+}
+
+.btn-outline {
+  border: 1px solid #0d6efd !important;
+  color: #0d6efd !important;
+  border-radius: 6px !important;
+}
+
+/* DISCOUNT CARDS */
+.discount-card {
+  border-radius: 8px !important;
+  margin-bottom: 12px;
+  padding: 20px;
+  color: white;
+}
+
+.orange-bg {
+  background-color: #f38332 !important;
+}
+
+.teal-bg {
+  background-color: #55bdc3 !important;
+}
+
+.discount-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .banner-img {
+    height: 260px;
+  }
+
+  .user-card,
+  .discount-card {
+    margin-top: 10px;
+  }
+
+  .category-main,
+  .category-item {
+    text-align: left;
+    padding-left: 12px;
+  }
 }

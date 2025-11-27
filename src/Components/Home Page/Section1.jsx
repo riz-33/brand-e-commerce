@@ -1,215 +1,92 @@
 import React from "react";
-import "./Style.css";
 import { Button, Card, Col, List, Row } from "antd";
+import "./Style.css";
+
 import Banner from "../../assets/Image/backgrounds/Banner-board-800x420 2.png";
 import Avatar from "../../assets/Layout/Misc/Avatar.png";
 
 const Section1 = () => {
-  const data = ["Automobiles"];
-  const data2 = [
-    "Colthes and Wear",
+  const mainCategory = ["Automobiles"];
+  const subCategories = [
+    "Clothes and Wear",
     "Home Interiors",
     "Computer and Tech",
-    "Tools, Equipments",
+    "Tools & Equipment",
     "Sports and Outdoors",
     "Animals and Pets",
     "Machinery Tools",
-    "More Category",
+    "More Categories",
   ];
 
   return (
-    <div
-      className="section-main"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <Card
-        style={{
-          paddingTop: "20px",
-          paddingLeft: "5px",
-          width: "1180px",
-          height: "400px",
-          top: "10px",
-          borderRadius: "8px",
-          border: "1px solid #DEE2E7",
-        }}
-        >
-        <Row>
-          <Col
-            style={{
-              marginLeft: 10,
-              width: "250px",
-              height: "360px",
-              // border: "1px solid black",
-              marginRight: "5px",
-            }}
-          >
+    <div className="section1-wrapper">
+      <Card className="section1-card">
+        <Row gutter={[16, 16]}>
+          
+          {/* LEFT CATEGORY MENU */}
+          <Col xs={24} sm={8} md={6} lg={6}>
             <List
-              dataSource={data}
+              dataSource={mainCategory}
               renderItem={(item) => (
-                <List.Item
-                  style={{
-                    borderBlockEnd: "none",
-                    height: "41px",
-                    backgroundColor: "#e5f1ff",
-                    fontWeight: "600",
-                    textAlign: "center",
-                  }}
-                >
-                  {item}
-                </List.Item>
+                <List.Item className="category-main">{item}</List.Item>
               )}
             />
+
             <List
-              dataSource={data2}
+              dataSource={subCategories}
               renderItem={(item) => (
-                <List.Item
-                  style={{
-                    borderBlockEnd: "none",
-                    height: "41px",
-                  }}
-                >
-                  {item}
-                </List.Item>
+                <List.Item className="category-item hoverable">{item}</List.Item>
               )}
             />
           </Col>
 
-          <Col style={{ marginRight: "8px" }}>
-            <img
-              src={Banner}
-              alt="banner"
-              style={{
-                width: "665px",
-                height: "360px",
-                border: "1px solid white",
-              }}
-            />
+          {/* CENTER BANNER */}
+          <Col xs={24} sm={16} md={12} lg={14}>
+            <img src={Banner} alt="Category Banner" className="banner-img" />
           </Col>
-          <Col>
-            <Row
-              style={{
-                width: "200px",
-                height: "150px",
-                borderRadius: "6px",
-                backgroundColor: "#E3F0FF",
-                marginBottom: "11px",
-              }}
-            >
-              <Col>
-                <img
-                  src={Avatar}
-                  alt="Avatar"
-                  style={{
-                    width: "44px",
-                    height: "44px",
-                    marginTop: "12px",
-                    margin: "12px",
-                  }}
-                ></img>
-              </Col>
-              <Col>
-                <p
-                  style={{
-                    width: "112px",
-                    height: "38px",
-                    fontWeight: "400",
-                    fontSize: "16px",
-                    lineHeight: "100%",
-                  }}
-                >
-                  Hi, user
-                  <br />
-                  let’s get stated
-                </p>
-              </Col>
-              <Row>
-                <Button
-                  type="primary"
-                  style={{
-                    width: "180px",
-                    height: "30px",
-                    marginBottom: "5px",
-                    borderRadius: "6px",
-                    marginRight: "10px",
-                    marginLeft: "10px",
-                    gap: "10px",
-                  }}
-                >
-                  Join Now
-                </Button>
-              </Row>
-              <Row>
-                <Button
-                  style={{
-                    width: "180px",
-                    height: "30px",
-                    borderRadius: "6px",
-                    marginRight: "10px",
-                    marginBottom: "12px",
-                    marginLeft: "10px",
-                    gap: "10px",
-                    border: "1px solid white",
-                    color: "#0D6EFD",
-                  }}
-                >
-                  Log in
-                </Button>
-              </Row>
-            </Row>
 
-            <Row
-              style={{
-                width: "200px",
-                height: "95px",
-                borderRadius: "6px",
-                backgroundColor: "#F38332",
-                color: "white",
-                marginBottom: "11px",
-              }}
-            >
-              <p
-                style={{
-                  width: "144px",
-                  height: "57px",
-                  fontWeight: 400,
-                  fontSize: "16px",
-                  lineHeight: "100%",
-                  margin: "20px",
-                }}
-              >
-                Get US $10 off
-                <br />
-                with a new
-                <br />
+          {/* RIGHT SIDEBAR */}
+          <Col xs={24} md={6} lg={4}>
+            {/* User Card */}
+            <Card className="user-card">
+              <Row>
+                <Col flex="50px">
+                  <img src={Avatar} alt="avatar" className="user-avatar" />
+                </Col>
+
+                <Col flex="auto">
+                  <p className="user-greeting">
+                    Hi, User <br /> let’s get started
+                  </p>
+                </Col>
+
+                <Col span={24}>
+                  <Button type="primary" block className="btn-primary">
+                    Join Now
+                  </Button>
+                </Col>
+
+                <Col span={24}>
+                  <Button block className="btn-outline">
+                    Log in
+                  </Button>
+                </Col>
+              </Row>
+            </Card>
+
+            {/* Discount Box */}
+            <Card className="discount-card orange-bg">
+              <p className="discount-text">
+                Get US $10 off <br />
+                with a new <br />
                 supplier
               </p>
-            </Row>
-            <Row
-              style={{
-                width: "200px",
-                height: "95px",
-                borderRadius: "6px",
-                backgroundColor: "#55BDC3",
-                color: "white",
-                // marginBottom: "5px",
-              }}
-            >
-              <p
-                style={{
-                  width: "140px",
-                  height: "57px",
-                  fontWeight: 400,
-                  fontSize: "16px",
-                  lineHeight: "100%",
-                  margin: "20px",
-                }}
-              >
-                Send quotes with supplier preferences
-              </p>
-            </Row>
+            </Card>
+
+            {/* Supplier Box */}
+            <Card className="discount-card teal-bg">
+              <p className="discount-text">Send quotes with supplier preferences</p>
+            </Card>
           </Col>
         </Row>
       </Card>

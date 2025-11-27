@@ -31,6 +31,7 @@ import img2 from "../../assets/Layout/alibaba/Image/cloth/Bitmap.png";
 import img3 from "../../assets/Layout/alibaba/Image/cloth/2 1.png";
 import img4 from "../../assets/Layout/alibaba/Image/cloth/image 25.png";
 import img5 from "../../assets/Layout/alibaba/Image/cloth/image 26.png";
+import { DiscountBanner } from "./DiscountBanner";
 
 // NOTE: If using antd v5 import reset css in your root (e.g. index.js):
 // import "antd/dist/reset.css";
@@ -280,19 +281,7 @@ const ProductDetail = () => {
         </div>
 
         {/* Discount banner */}
-        <div className="discount-banner">
-          <div className="banner-inner">
-            <div>
-              <h3>Super discount on more than 100 USD</h3>
-              <p>Have you ever finally just write dummy info</p>
-            </div>
-            <div>
-              <Button type="primary" className="banner-cta">
-                Shop now
-              </Button>
-            </div>
-          </div>
-        </div>
+        <DiscountBanner />
       </div>
     </div>
   );

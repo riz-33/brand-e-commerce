@@ -65,7 +65,7 @@ const CartItem = () => {
   ];
 
   return (
-    <div style={{ padding: 15 }}>
+    <div>
       <h2>My Cart (3)</h2>
       <Row gutter={16}>
         <Col span={18}>

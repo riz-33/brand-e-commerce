@@ -5,70 +5,37 @@ import Flag from "../../assets/Layout1/Image/flags/DE@2x.png";
 
 const Navbar = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-evenly",
-        // alignItems: "center",
-        // padding: "12px 40px",
-        backgroundColor: "white",
-        borderBottom: "1px solid #e5e7eb",
-        fontSize: "16px",
-        // color: "#374151",
-        height: "56px",
-        // width: "1440px",
-        top: "86px",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "1.8rem",
-          width: "850px",
-        }}
-      >
-        <div
-          className="nav-item"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            cursor: "pointer",
-            transition: "color 0.2s ease-in-out",
-          }}
-        >
-          <FaBars style={{ fontSize: "18px" }} />
-          All category
+    <nav className="navbar">
+      {/* LEFT SECTION */}
+      <div className="navbar-left">
+        <div className="nav-item with-icon">
+          <FaBars />
+          <span>All category</span>
         </div>
+
         <div className="nav-item">Hot offers</div>
         <div className="nav-item">Gift boxes</div>
         <div className="nav-item">Projects</div>
         <div className="nav-item">Menu item</div>
 
-        <div>
-          Help <FaChevronDown />
+        <div className="nav-item help-dropdown">
+          Help <FaChevronDown size={12} />
         </div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "1.8rem",
-        }}
-      >
-        <div style={{ width: "124px" }}>
-          English, USD <FaChevronDown />
+      {/* RIGHT SECTION */}
+      <div className="navbar-right">
+        <div className="nav-item dropdown">
+          English, USD <FaChevronDown size={12} />
         </div>
 
-        <div style={{ width: "115px" }}>
+        <div className="nav-item dropdown flag-box">
           Ship to
-          <img src={Flag} alt="flag" />
-          <FaChevronDown />
+          <img src={Flag} alt="flag" className="flag-img" />
+          <FaChevronDown size={12} />
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

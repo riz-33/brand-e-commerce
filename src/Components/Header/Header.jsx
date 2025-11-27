@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/Layout/Brand/logo-colored.png";
 import { FaUser, FaCommentDots, FaHeart, FaShoppingCart } from "react-icons/fa";
 
@@ -8,64 +8,89 @@ const Header = () => {
     <header
       style={{
         backgroundColor: "#ffffff",
-        display: "flex",
-        justifyContent: "space-evenly",
-        alignItems: "center",
         borderBottom: "1px solid #e5e7eb",
-        height: "60px",
-        // width:"1440px"
+        padding: "10px 20px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        flexWrap: "wrap",
+        gap: "15px",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <div>
-          <img src={Logo} alt="Logo" />
-        </div>
+      {/* Left Section */}
+      <div
+        style={{
+          display: "flex",
+          // justifyContent: "space-evenly",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: "20px",
+          flex: "1",
+          minWidth: "250px",
+        }}
+        >
+        {/* LOGO */}
+        <Link to="/">
+          <img
+            src={Logo}
+            alt="Logo"
+            style={{
+              height: "40px",
+              objectFit: "contain",
+            }}
+            />
+        </Link>
 
+        {/* SEARCH BOX */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            overflow: "hidden",
-            marginLeft: "50px",
-            borderRadius: "6px",
             border: "1px solid #0D6EFD",
-            width: "665px",
+            borderRadius: "6px",
+            overflow: "hidden",
             height: "40px",
+            flex: "1",
+            minWidth: "260px",
+            maxWidth: "800px",
           }}
         >
           <input
             type="text"
-            placeholder=" Search"
+            placeholder="Search"
             style={{
-              width: "421px",
-              height: "34px",
+              flex: 1,
+              height: "40px",
+              paddingLeft: "10px",
               outline: "none",
+              border: "none",
             }}
-          />
+            />
+
           <select
             style={{
-              width: "145px",
+              width: "120px",
               height: "40px",
-
-              // padding: "8px",
+              border: "none",
               backgroundColor: "#f9fafb",
-              // color: "#4b5563",
               outline: "none",
+              cursor: "pointer",
             }}
-          >
+            >
             <option>All category</option>
             <option>Men</option>
             <option>Women</option>
             <option>Electronics</option>
             <option>Home</option>
           </select>
+
           <button
             style={{
               backgroundColor: "#2563eb",
               color: "#fff",
               border: "none",
               cursor: "pointer",
-              width: "100px",
+              width: "90px",
               height: "40px",
             }}
           >
@@ -74,49 +99,42 @@ const Header = () => {
         </div>
       </div>
 
+      {/* RIGHT ICON LINKS */}
       <div
-        className="links"
         style={{
+          cursor: "pointer",
           display: "flex",
           alignItems: "center",
-          gap: "1.5rem",
+          gap: "25px",
           color: "#8B96A5",
-          // fontSize: "18px",
           textAlign: "center",
-          cursor: "pointer",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          minWidth: "260px",
         }}
       >
-        <div className="links-I">
-          <i>
-            <a href="#">
-              <FaUser style={{ color: "#8b96a5" }} />
-            </a>
-          </i>
-          <div>Profile</div>
-        </div>
         <div>
-          <i>
-            <a href="#">
-              <FaCommentDots style={{ color: "#8b96a5" }} />
-            </a>
-          </i>
-          <div>Message</div>
+          <FaUser size={20} />
+          <div style={{ fontSize: "13px" }}>Profile</div>
         </div>
+
         <div>
-          <i>
-            <a href="#">
-              <FaHeart style={{ color: "#8b96a5" }} />
-            </a>
-          </i>
-          <div>Orders</div>
+          <FaCommentDots size={20} />
+          <div style={{ fontSize: "13px" }}>Message</div>
         </div>
+
         <div>
-          <i>
-            <a href="/cart">
-              <FaShoppingCart style={{ color: "#8b96a5" }} />
-            </a>
-          </i>
-          <div>My Cart</div>
+          <FaHeart size={20} />
+          <div style={{ fontSize: "13px" }}>Wishlist</div>
+        </div>
+
+        <div>
+          <Link to="/cart" style={{ color: "#8B96A5", textDecoration: "none" }}>
+            <div>
+              <FaShoppingCart size={20} />
+              <div style={{ fontSize: "13px", color: "#8B96A5" }}>My Cart</div>
+            </div>
+          </Link>
         </div>
       </div>
     </header>

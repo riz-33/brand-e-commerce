@@ -20,7 +20,7 @@ export const Section2 = () => {
       <Card
         style={{
           width: "1180px",
-          height: "240px",
+          // height: "240px",
           marginTop: "3%",
           border: "1px solid #DEE2E7",
         }}
