@@ -38,25 +38,26 @@ export const Section7 = () => {
     <div
       className="section-service"
       style={{
-        display: "flex",
+        marginTop:10,
+        // display: "flex",
         overflow: "hidden",
-        justifyContent: "center",
+        // justifyContent: "center",
       }}
     >
       <div
         style={{
-          width: "1180px",
-          height: "256px",
+          // width: "1180px",
+          // height: "256px",
         }}
       >
         <h2 style={{ padding: 0, margin: 12 }}>Our Extra Services</h2>
 
         <Row gutter={[12, 12]} style={{ justifyContent: "space-between" }}>
           {items.map((item, i) => (
-            <Col key={i}>
+            <Col span={6} key={i}>
               <Card
                 style={{
-                  width: 280,
+                  // width: 280,
                   height: 200,
                   borderRadius: 6,
                   overflow: "hidden",
@@ -65,7 +66,7 @@ export const Section7 = () => {
               >
                 <div
                   style={{
-                    width: 280,
+                    // width: 280,
                     height: 120,
                     backgroundImage: `url(${item.img})`,
                     backgroundSize: "contain",
@@ -101,7 +102,7 @@ export const Section7 = () => {
                 <div
                   style={{
                     height: 44,
-                    padding: "15px 90px 0px 16px",
+                    padding: "15px 140px 0px 16px",
                   }}
                 >
                   <Typography

@@ -18,8 +18,8 @@ export const Section5 = () => {
     <div
       className="section-inquiry"
       style={{
-        display: "flex",
-        justifyContent: "center",
+        // display: "flex",
+        // justifyContent: "center",
         overflow: "hidden",
       }}
     >
@@ -27,9 +27,9 @@ export const Section5 = () => {
         className="section-inquiry-card"
         style={{
           backgroundImage: `url("${bg}")`,
-          width: "1180px",
-          height: "420px",
-          marginTop: "3%",
+          // width: "1180px",
+          // height: "420px",
+          marginTop: "20px",
           border: "1px solid #E0E0E0",
         }}
       >
@@ -73,7 +73,9 @@ export const Section5 = () => {
               className="section-inquiry-card"
               style={{
                 width: "491px",
-                height: "346px",
+                // height: "346px",
+                padding: 10,
+                marginBottom: "50px",
                 borderRadius: "6px",
                 boxShadow: "0 3px 6px rgba(0,0,0,0.2)",
               }}
@@ -84,7 +86,7 @@ export const Section5 = () => {
                 form={form}
                 name="control-hooks"
                 onFinish={onFinish}
-                style={{ marginLeft: 20 }}
+                style={{ margin: 20 }}
               >
                 <Form.Item>
                   <Input defaultValue="What item you need?" />

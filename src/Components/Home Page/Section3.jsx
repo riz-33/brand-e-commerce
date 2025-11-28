@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Card, Row, Col, Typography, Button } from "antd";
 import Chair from "../../assets/Image/interior/1.png";
 import Lamp from "../../assets/Image/interior/2.png";
 import Mattress from "../../assets/Image/interior/3.png";
@@ -9,164 +9,113 @@ import Coffee from "../../assets/Image/interior/6.png";
 import Appliance from "../../assets/Image/interior/7.png";
 import Pots from "../../assets/Image/interior/8.png";
 import bg from "../../assets/Image/backgrounds/Group 969.png";
-import { Card } from "antd";
+
+const { Title, Text } = Typography;
 
 export const Section3 = () => {
   const items = [
-    {
-      title: "Soft Chairs",
-      price: "USD 19",
-      img: Chair,
-    },
-    {
-      title: "Lamps",
-      price: "USD 19",
-      img: Lamp,
-    },
-    {
-      title: "Mattress",
-      price: "USD 19",
-      img: Mattress,
-    },
-    {
-      title: "Kitchen Dishes",
-      price: "USD 19",
-      img: Dishes,
-    },
-    {
-      title: "Blenders",
-      price: "USD 100",
-      img: Blender,
-    },
+    { title: "Soft Chairs", price: "USD 19", img: Chair },
+    { title: "Lamps", price: "USD 19", img: Lamp },
+    { title: "Mattress", price: "USD 19", img: Mattress },
+    { title: "Kitchen Dishes", price: "USD 19", img: Dishes },
+    { title: "Blenders", price: "USD 100", img: Blender },
     { title: "Coffee Maker", price: "USD 39", img: Coffee },
-    {
-      title: "Home Appliance",
-      price: "USD 19",
-      img: Appliance,
-    },
-    {
-      title: "Flower Pots",
-      price: "USD 10",
-      img: Pots,
-    },
+    { title: "Home Appliance", price: "USD 19", img: Appliance },
+    { title: "Flower Pots", price: "USD 10", img: Pots },
   ];
 
   return (
-    <div
-      className="block-item-group1"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        overflow: "hidden",
-      }}
-    >
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <Card
-        className="block-item-card"
         style={{
-          width: "1180px",
-          height: "257px",
-          marginTop: "3%",
-          border: "1px solid #E0E0E0",
+          // width: "1180px",
+          // height: "257px",
+          marginTop: "20px",
           borderRadius: "6px",
-          marginLeft: 0,
+          padding: 0,
         }}
       >
-        <Grid container>
-          {/* LEFT BANNER */}
-          <Grid
-            item
-            xs={12}
-            md={3}
-            sx={{
+        <Row style={{ height: "100%" }}>
+          {/* LEFT SECTION */}
+          <Col
+            span={6}
+            style={{
               backgroundImage: `url("${bg}")`,
-              backgroundSize: "contain",
+              backgroundSize: "cover",
               backgroundPosition: "center",
-              p: 3,
+              padding: "24px",
               display: "flex",
               flexDirection: "column",
-              // justifyContent: "space-between",
-              height: "257px",
-              width: "280px",
+              justifyContent: "center",
+              borderRight: "1px solid #e5e7eb",
             }}
           >
-            <Typography variant="h5" fontWeight={700}>
+            <Title level={4} style={{ margin: 0, fontWeight: 700 }}>
               Home and <br /> outdoor
-            </Typography>
+            </Title>
 
             <Button
-              variant="contained"
-              sx={{
+              style={{
                 width: "120px",
-                padding: "6px 6px",
-                mt: 3,
-                background: "#fff",
-                color: "#111",
-                boxShadow: "0 3px 6px rgba(0,0,0,0.2)",
+                marginTop: "20px",
+                background: "white",
                 borderRadius: "6px",
-                textTransform: "none",
-                "&:hover": { background: "#f9f9f9" },
+                boxShadow: "0 3px 6px rgba(0,0,0,0.2)",
               }}
             >
               Source now
             </Button>
-          </Grid>
+          </Col>
 
           {/* RIGHT GRID */}
-          <Grid item xs={12} md={9} size={6}>
-            <Grid
-              container
-              sx={{
-                justifyContent: "space-between",
-                height: "257px",
-                width: "900px",
-              }}
-            >
-              {items.map((item, i) => (
-                <Grid
-                  key={i}
-                  sx={{
-                    display: "flex",
-                    height: "127px",
-                    width: "223px",
-                    borderLeft: {
-                      sm: i % 4 !== 0 ? "1px solid #e5e7eb" : "none",
-                    },
-                    borderBottom: i < 4 ? "1px solid #e5e7eb" : "none",
-                    p: 2.5,
-                  }}
-                >
-                  <div>
-                    <Typography fontWeight={400} fontSize="16px">
-                      {item.title}
-                    </Typography>
+          <Col span={18}>
+            <Row style={{ height: "100%" }}>
+              {items.map((item, index) => {
+                const isRight = (index + 1) % 4 === 0;
+                const isBottom = index >= 4;
 
-                    <Typography
-                      variant="body2"
-                      sx={{ color: "#6b7280", mt: 0.5, lineHeight: 1.2 }}
-                    >
-                      From <br /> {item.price}
-                    </Typography>
-                  </div>
-
-                  <Box
-                    component="img"
-                    src={item.img}
-                    alt={item.title}
-                    sx={{
-                      width: "82px",
-                      height: "82px",
-                      objectFit: "contain",
-                      mt: 1.5,
-                      ml: "auto",
-                      mr: "auto",
-                      display: "block",
+                return (
+                  <Col
+                    key={index}
+                    span={6}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      padding: "20px",
+                      borderRight: isRight ? "none" : "1px solid #e5e7eb",
+                      borderBottom: isBottom ? "none" : "1px solid #e5e7eb",
                     }}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-          </Grid>
-        </Grid>
+                  >
+                    {/* TEXT */}
+                    <div>
+                      <Text style={{ fontSize: "16px", fontWeight: 500 }}>
+                        {item.title}
+                      </Text>
+
+                      <br />
+
+                      <Text style={{ color: "#6b7280", fontSize: "14px" }}>
+                        From <br /> {item.price}
+                      </Text>
+                    </div>
+
+                    {/* IMAGE */}
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      style={{
+                        width: "82px",
+                        height: "82px",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </Col>
+                );
+              })}
+            </Row>
+          </Col>
+        </Row>
       </Card>
     </div>
   );

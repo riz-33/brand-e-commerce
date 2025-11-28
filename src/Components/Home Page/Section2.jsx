@@ -1,185 +1,131 @@
 import React from "react";
-import "./Style.css";
 import { Badge, Card, Col, Row, Statistic } from "antd";
 import Watch from "../../assets/Image/tech/1.png";
 import Laptop from "../../assets/Image/tech/6.png";
 import Camera from "../../assets/Image/tech/2.png";
 import Headphone from "../../assets/Image/tech/5.png";
 import Mobile from "../../assets/Image/tech/image 23.png";
+
 const { Meta } = Card;
 
 export const Section2 = () => {
   return (
-    <div
-      className="section-scale"
-      style={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
+    <div>
       <Card
         style={{
-          width: "1180px",
-          // height: "240px",
-          marginTop: "3%",
+          // width: 1180,
+          // height: 240,
+          marginTop: "20px",
           border: "1px solid #DEE2E7",
+          // padding: "10px",
         }}
       >
-        <Row style={{ justifyContent: "space-between" }}>
-          <Col style={{ marginLeft: "20px" }}>
-            <h4
-              style={{
-                height: "28px",
-                fontWeight: 600,
-                fontSize: "20px",
-                marginBottom: 0,
-              }}
-            >
+        <Row gutter={[16, 16]}>
+          {/* LEFT SIDE */}
+          <Col
+            xs={24}
+            sm={8}
+            md={6}
+            lg={6}
+            style={{ paddingTop: 10, paddingLeft: 30 }}
+          >
+            <h4 style={{ fontSize: 20, fontWeight: 600, marginBottom: 0 }}>
               Deals and offers
             </h4>
 
-            <p
-              style={{
-                width: "155px",
-                height: "19px",
-                fontWeight: 400,
-                fontSize: "16px",
-                lineHeight: "100%",
-                color: "#8B96A5",
-                marginTop: 0,
-              }}
-            >
+            <p style={{ fontSize: 16, color: "#8B96A5", marginTop: 4 }}>
               Hygiene equipments
             </p>
 
-            <Row
-              style={{ width: "198px", height: "50px", borderRadius: "4px" }}
-            >
-              <Col>
-                <Card
-                  style={{
-                    width: "45px",
-                    height: "60px",
-                    backgroundColor: "#606060",
-                    justifyItems: "center",
-                  }}
-                >
-                  <Statistic
-                    style={{ textAlign: "center" }}
-                    title="04"
-                    value={"Days"}
-                  />
-                </Card>
-              </Col>
-              <Col>
-                <Card
-                  style={{
-                    width: "45px",
-                    height: "60px",
-                    backgroundColor: "#606060",
-                    // justifyItems: "center",
-                  }}
-                >
-                  <Statistic title="13" value={"Hour"} />
-                </Card>
-              </Col>
-              <Col>
-                <Card
-                  style={{
-                    width: "45px",
-                    height: "60px",
-                    backgroundColor: "#606060",
-                    justifyItems: "center",
-                  }}
-                >
-                  <Statistic title="34" value={"Min"} />
-                </Card>
-              </Col>
-              <Col>
-                <Card
-                  style={{
-                    width: "45px",
-                    height: "60px",
-                    backgroundColor: "#606060",
-                    justifyItems: "center",
-                  }}
-                >
-                  <Statistic title="56" value={"Sec"} />
-                </Card>
-              </Col>
+            {/* Countdown Boxes */}
+            <Row gutter={8}>
+              {[
+                { value: "04", label: "Days" },
+                { value: "13", label: "Hour" },
+                { value: "34", label: "Min" },
+                { value: "56", label: "Sec" },
+              ].map((item, i) => (
+                <Col key={i}>
+                  <Card
+                    style={{
+                      width: 60,
+                      height: 70,
+                      backgroundColor: "#505050",
+                      color: "white",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderRadius: 6,
+                    }}
+                  >
+                    <Statistic
+                      value={item.value}
+                      title={item.label}
+                      valueStyle={{ color: "white", fontSize: 18 }}
+                      titleStyle={{ color: "white", fontSize: 12 }}
+                    />
+                  </Card>
+                </Col>
+              ))}
             </Row>
           </Col>
 
-          <Col>
-            <Row>
-              <Card
-                className="section-scale-card"
-                hoverable
-                cover={<img className="card-image" alt="Watch" src={Watch} />}
-              >
-                <div>
-                  <Meta title="Smart Watches" />
-                  <Badge
-                    style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
-                    count={"-25%"}
-                  />
-                </div>
-              </Card>
-              <Card
-                className="section-scale-card"
-                hoverable
-                cover={<img className="card-image" alt="Laptop" src={Laptop} />}
-              >
-                <div>
-                  <Meta title="Laptops" />
-                  <Badge
-                    style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
-                    count={"-15%"}
-                  />
-                </div>
-              </Card>
-
-              <Card
-                className="section-scale-card"
-                hoverable
-                cover={<img className="card-image" alt="Camera" src={Camera} />}
-              >
-                <div>
-                  <Meta title="GoPro Cameras" />
-                  <Badge
-                    style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
-                    count={"-40%"}
-                  />
-                </div>
-              </Card>
-              <Card
-                className="section-scale-card"
-                hoverable
-                cover={
-                  <img className="card-image" alt="Headphone" src={Headphone} />
-                }
-              >
-                <div>
-                  <Meta title="Headphones" />
-                  <Badge
-                    style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
-                    count={"-25%"}
-                  />
-                </div>
-              </Card>
-              <Card
-                className="section-scale-card"
-                hoverable
-                cover={<img className="card-image" alt="Mobile" src={Mobile} />}
-              >
-                <div>
-                  <Meta title="Canon Cameras" />
-                  <Badge
-                    style={{ backgroundColor: "#f9e3e3", color: "#EB001B" }}
-                    count={"-25%"}
-                  />
-                </div>
-              </Card>
+          {/* RIGHT SIDE PRODUCTS */}
+          <Col xs={24} sm={16} md={18} lg={18}>
+            <Row style={{ display: "flex", justifyContent: "space-between" }}>
+              {[
+                { img: Watch, title: "Smart Watches", off: "-25%" },
+                { img: Laptop, title: "Laptops", off: "-15%" },
+                { img: Camera, title: "GoPro Cameras", off: "-40%" },
+                { img: Headphone, title: "Headphones", off: "-25%" },
+                { img: Mobile, title: "Canon Cameras", off: "-25%" },
+              ].map((item, i) => (
+                <Col
+                  // style={{ justifyContent: "center", display: "flex" }}
+                  key={i}
+                >
+                  <Card
+                    hoverable
+                    style={{
+                      width: 180,
+                      border: "none",
+                      // height:235,
+                      textAlign: "center",
+                      // borderRadius: 8,
+                      // display:'flex',
+                    }}
+                    cover={
+                      <div>
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          style={{
+                            width: 140,
+                            height: 140,
+                            objectFit: "contain",
+                            marginTop: 20,
+                            marginBottom: 10,
+                            // paddingTop: 10,
+                          }}
+                        />
+                      </div>
+                    }
+                  >
+                    <Meta title={item.title} />
+                    <Badge
+                      count={item.off}
+                      style={{
+                        backgroundColor: "#f9e3e3",
+                        color: "#EB001B",
+                        marginTop: 10,
+                        marginBottom: 20,
+                        fontWeight: 600,
+                      }}
+                    />
+                  </Card>
+                </Col>
+              ))}
             </Row>
           </Col>
         </Row>

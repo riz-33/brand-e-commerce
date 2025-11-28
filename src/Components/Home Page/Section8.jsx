@@ -68,16 +68,22 @@ export const Section8 = () => {
     <div
       className="section-country"
       style={{
-        display: "flex",
-        overflow: "hidden",
-        justifyContent: "center",
+        marginTop: 20,
+        marginBottom:40,
+
+        // display: "flex",
+        // overflow: "hidden",
+        // justifyContent: "center",
       }}
     >
       <div
-        style={{
-          width: "1177px",
-          height: "138px",
-        }}
+        style={
+          {
+            paddingInline:10,
+            // width: "1177px",
+            // height: "138px",
+          }
+        }
       >
         <h3 style={{ padding: 0, margin: 12, marginLeft: 0 }}>
           Suppliers by Region

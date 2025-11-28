@@ -68,16 +68,21 @@ export const Section6 = () => {
     <div
       className="section-recommend"
       style={{
-        display: "flex",
+        marginTop: 10,
+
+        // padding:10,
+        // display: "flex",
         overflow: "hidden",
-        justifyContent: "center",
+        // justifyContent: "center",
       }}
     >
       <div
-        style={{
-          width: "1180px",
-          height: "696px",
-        }}
+        style={
+          {
+            // width: "1180px",
+            // height: "696px",
+          }
+        }
       >
         <h2 style={{ padding: 0, margin: 12 }}>Recommended Items</h2>
 
@@ -87,8 +92,8 @@ export const Section6 = () => {
               <Card
                 className="block-item-card"
                 style={{
-                  width: "220px",
-                  height: 310,
+                  width: "260px",
+                  // height: 310,
                   border: "1px solid #E0E0E0",
                   borderRadius: "6px",
                 }}

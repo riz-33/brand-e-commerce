@@ -1,131 +1,42 @@
-.footer-container {
-  padding: 2.5rem 0;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  background-color: white;
+.footer-section {
+  padding: 40px 0 10px;
+  background: #f8f8f8;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 3rem 3rem;
-}
-
-.footer-about {
-  grid-column: span 2;
-  padding-right: 4.5rem;
+.footer-logo {
+  width: 160px;
+  margin-bottom: 12px;
 }
 
 .footer-description {
-  color: #505050;
-  font-size: 1rem;
-  line-height: 1.6;
+  display: block;
+  max-width: 250px;
+  margin-top: 12px;
+  line-height: 22px;
 }
 
-.footer-social {
-  margin-top: 2rem;
-  display: flex;
-  gap: 0.5rem;
-  list-style: none;
+.social-icon-antd {
+  font-size: 22px;
+  color: #555;
+  transition: 0.2s;
 }
 
-.social-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  background-color: #1f2937;
-  color: white;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-}
-
-.social-icon:hover {
-  background-color: #2563eb;
-}
-
-.social-svg {
-  width: 1rem;
-  height: 1rem;
-}
-
-.footer-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.footer-column > li {
-  list-style: none;
+.social-icon-antd:hover {
+  color: #1890ff;
 }
 
 .footer-link {
-  color: #9ca3af;
-  text-decoration: none;
+  color: #555;
   display: block;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  transition: 0.3s;
+  padding: 2px 0;
+  transition: 0.2s;
 }
 
 .footer-link:hover {
-  color: #2563eb;
+  color: #1890ff;
 }
 
-.footer-divider {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  background-color: #eff2f4;
-}
-
-.footer-credit {
-  text-align: center;
-  color: #4b5563;
-  font-size: 0.9rem;
-}
-
-.footer-language {
-  display: flex;
-  align-items: center;
-  margin: 2px;
-  gap: 5px;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .footer-about,
-  .footer-newsletter {
-    grid-column: span 3;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-about,
-  .footer-newsletter {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 640px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-about,
-  .footer-newsletter {
-    grid-column: span 1;
-  }
+.footer-bottom {
+  margin-top: 20px;
+  padding: 0 20px;
 }
