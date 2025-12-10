@@ -14,7 +14,7 @@ It includes product listing, detail view, add-to-cart flow and a shopping cart p
 
 ## 🌟 Key Features
 
-- 🏠 **Home Page** with categories & deals
+- 🏠 **Home Page (https://brandecomm.netlify.app/)** with categories & deals
 - 🛒 **Products Listing Page**
 - 🔍 **Product Details Page**
 - 🧺 **Cart Management**
@@ -34,7 +34,7 @@ It includes product listing, detail view, add-to-cart flow and a shopping cart p
 
 ---
 
-### 💻 **Installation**
+## 💻 **Installation**
 
 ```bash
  git clone https://github.com/riz-33/brand-e-commerce.git
