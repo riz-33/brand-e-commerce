@@ -14,7 +14,7 @@ It includes product listing, detail view, add-to-cart flow and a shopping cart p
 
 ## 🌟 Key Features
 
-- 🏠 **Home Page (https://brandecomm.netlify.app/)** with categories & deals
+- 🏠 **[Home Page] (https://brandecomm.netlify.app/)** with categories & deals
 - 🛒 **Products Listing Page**
 - 🔍 **Product Details Page**
 - 🧺 **Cart Management**
