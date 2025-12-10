@@ -49,11 +49,11 @@ It includes product listing, detail view, add-to-cart flow and a shopping cart p
 
 | Home Page                                       | Product Page                                            |
 | ----------------------------------------------- | ------------------------------------------------------- |
-| ![Home Screenshot](public/screenshots/home.png) | ![Products Screenshot](public/screenshots/products.png) |
+| ![Home Screenshot](public/screenshots/home.jpg) | ![Products Screenshot](public/screenshots/products.jpg) |
 
 | Product Detail                                      | Cart Page                                       |
 | --------------------------------------------------- | ----------------------------------------------- |
-| ![Detail Screenshot](public/screenshots/detail.png) | ![Cart Screenshot](public/screenshots/cart.png) |
+| ![Detail Screenshot](public/screenshots/detail.jpg) | ![Cart Screenshot](public/screenshots/cart.jpg) |
 
 ---
 
